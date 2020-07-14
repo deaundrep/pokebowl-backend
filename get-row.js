@@ -4,8 +4,16 @@
 // Check it out to see its content and shape!
 const pokemon = require('./pokemon.js');
 
-
-
+const getRow = function(nameLookingFor){
+  for(let pokeRow of pokemon){
+    const currentPokemon = pokeRow[0];
+    if (currentPokemon === nameLookingFor){
+      return currentPokemon;
+    }
+  }
+return null
+}
+console.log(getRow('bulbasaur'))
 
 // OUR code here.
 
